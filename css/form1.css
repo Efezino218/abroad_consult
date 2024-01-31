@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+    box-sizing: border-box;  
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size:15px;
+    background-color: gray;
+    background-image: radial-gradient(red, gray);
+}
+
+
+img.logo{
+    width: 50px;
+    border-radius: 100px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+/* container-1 */
+
+/* div.container-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 3rem;
+} */
+
+h3.school{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+div.internation{
+    /* width: 18rem; */
+    font-size:15px;
+    text-align: center;
+}
+
+div.container1{
+    color: #ffffff;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10rem;
+    font-size: 1.1rem;
+}
+/* container-1 END */
+
+
+/* Container-2 */
+div.flex-con{
+    display: flex;
+    gap: 20%;
+}
+p.application1{
+    width: 20rem;
+    font-size:15px;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+p.application2{
+    width: 20rem;
+    font-size:15px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+div.container2{
+    background-color: #ff0000;
+    font-size: 1.3rem;
+    margin-top: 3rem;
+    padding: 5rem 20rem 5rem 20rem;
+}
+
+
+/* Checkbox button */
+label.lab{
+    background-color: #ffffff;
+    color: #ff0000;
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+p.please{
+    color: #ffffff;
+    font-size: 13px;
+    margin-bottom: 50px;
+}
+
+div.dii{
+    border-bottom: 2px solid #fff;
+    margin-bottom: 20px;
+}
+
+  
+input[type=submit]{
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* float: right; */
+}
+
+
+input[type=submit]:hover{
+    background-color: #ffffff;
+    color: #ff0000;
+    transition: 0.5s;
+} 
+
+
+
+
+
+
+/* Clear Float After the Columns */
+.container2::after{
+    content: "";
+    display: table;
+    clear: both;
+}  
+
+/* Responsive Layout-When the screen is less than 600px wide, make 
+the two columns stack on top of each other instead of next to each other */
+
+
+
+@media screen and (max-width:2150px){
+    
+  }
+
+
+@media screen and (max-width:1000px){
+    div.container2{
+        background-color: #ff0000;
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        padding: 5rem 10rem 5rem 10rem;
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width:1024px){
+    
+
+}
+
+@media screen and (max-width:7000px){
+    div.container2{
+        background-color: #ff0000;
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        padding: 5rem 5rem 5rem 5rem;
+        position: relative;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:500px){
+    div.container2{
+        background-color: #ff0000;
+        width: 100%;
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        padding: 5rem 1rem 5rem 1rem;
+        position: relative;
+    }
+
+    p.application1, p.application2{
+        width: 80rem;
+        font-size: 14px;     
+  }
+
+  div.container1{
+    width: 80%;
+    margin-left: 13%;
+}
+}

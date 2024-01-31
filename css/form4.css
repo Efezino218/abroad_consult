@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size:15px;
+    background-color: gray;
+    background-image: radial-gradient(red, gray);
+}
+
+/* Container */
+
+/* div.container-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 3rem;
+    height: 100vh;
+} */
+
+img.logo{
+    width: 50px;
+    border-radius: 100px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+h3.school{
+    margin-bottom: 1.4rem;
+    font-size: 30px;
+}
+
+div.container{
+    border-radius: 5px;
+    background-color: #ff0000;
+    padding: 20px;
+    float: left;
+    width: 100%;
+   
+}
+div.container1{
+    color: #ffffff;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    float: right;
+    font-size: 1.1rem; 
+    width: 80%;
+}
+
+div.internation{
+    width: 18rem;
+    font-size:15px;
+
+}
+
+
+
+h3.thanks{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+}
+p.contact{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+p.border-bottom{
+    width: 40rem;
+    margin-left: 18rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+}
+
+
+p.complete{
+    font-size: 13px;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+div.border-bottom{
+    width: 80%;
+    margin-left: 5rem;
+    margin-bottom: 20px;
+    border-bottom: 10px solid #000000;
+    border-radius: 10px;
+}
+
+  
+input[type=submit]{
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* float: right; */
+}
+
+
+input[type=submit]:hover{
+    background-color: #ffffff;
+    color: #ff0000;
+    transition: 0.5s;
+} 
+
+div.row{
+    text-align: center;
+}
+
+
+
+
+/* Clear Float After the Columns */
+.container::after{
+    content: "";
+    display: table;
+    clear: both;
+}  
+
+/* Responsive Layout-When the screen is less than 600px wide, make 
+the two columns stack on top of each other instead of next to each other */
+
+
+
+@media screen and (max-width:2150px){
+    .container1, .container{
+        width: 100%;
+        margin-top: 50px;
+    }
+  
+    .container1{
+        margin-left: 1rem;
+    }
+
+    div.internation{
+        width: 14rem;
+    }
+
+    p.border-bottom{
+        width: 40rem;
+        margin: auto;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+  }
+
+@media screen and (max-width:1140px){
+      body{
+          overflow-x: hidden;
+      }
+}
+
+@media screen and (max-width:1000px){
+    .col-25, .col-75, input[type=file]{
+        width: 100%;
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    input[type=submit]{
+        width: 50%;
+    }
+
+    .container1, .container{
+        width: 100%;
+        margin-top: 0;
+    }
+    .container1{
+        margin-left: 1rem;
+    }
+
+    div.internation{
+        width: 14rem;
+    }
+
+    p.border-bottom{
+        width: 40rem;
+        margin-left: 0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .container1{
+        margin-left: 0;
+        float: left;
+    }
+
+}
+
+@media screen and (max-width:960px){
+  .container1, .container{
+      width: 100%;
+      margin-top: 50px;
+  }
+
+  .container1{
+      margin-left: 15rem;
+  }
+
+  p.border-bottom{
+    width: 40rem;
+    margin: auto;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+}
+}
+
+
+
+
+@media screen and (max-width:500px){
+    .container1, .container{
+        width: 100%;
+        margin-top: 50px;
+    }
+  
+    .container1{
+        margin-left: 1rem;
+    }
+
+    div.internation{
+        width: 14rem;
+    }
+
+    div.border-bottom{
+        width: 80%;
+        margin: auto;
+        border-bottom: 10px solid #000000;
+        border-radius: 10px;
+    }
+    p.complete{
+        font-size: 13px;
+        margin-left: 3rem;
+        margin-bottom: 6px;
+        color: #ffffff;
+    }
+
+    p.border-bottom{
+        width: 40rem;
+        margin-left: 0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ffffff;
+    }
+    body{
+        overflow-x: hidden;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

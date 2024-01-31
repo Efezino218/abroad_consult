@@ -1,0 +1,337 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-size:15px;
+
+
+}
+
+img.logo{
+    width: 50px;
+    border-radius: 100px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+/* container-1 */
+
+.float{
+    float: left;
+    width: 30%;
+    margin-left: 3rem;
+}
+
+.container{
+    float: right;
+    width: 65%;
+    border-radius: 5px;
+    background-color: #ff0000;
+    padding: 20px;
+}
+
+h3.school{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+div.internation{
+    width: 18rem;
+    font-size:15px;
+
+}
+
+div.container1{
+    margin-top: 10rem;
+    font-size: 1.1rem;
+    
+}
+
+label.male1{
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 5rem;
+}
+
+label.male2{
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 5rem;
+}
+
+label.male3{
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 5rem;
+}
+/* Male Or Female Box End */
+
+
+input.file-upload[type=file]{
+    width: 20rem;
+    padding: 1rem 2rem;
+    margin-left: 5rem;
+    border: 1px solid #ccc;
+    color: white;
+    background-color: #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+p.upload{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 5rem;
+}
+
+p.budget{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 5rem;
+    margin-top: 3rem;
+}
+
+input.inp[type=text], select{
+    width: 40rem;
+    padding: 1rem 2rem;
+    margin-left: 5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+p.border-bottom{
+    width: 40rem;
+    margin-left: 5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* form End */
+  
+  input[type=text], textarea{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: vertical;    
+  }
+  
+  label.lab{
+      color: #ffffff;
+      font-weight: bold;
+      padding: 12px 12px 12px 0;
+  }
+  
+  
+  input[type=submit]{
+      background-color: #000000;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+  }
+  
+  
+  input[type=submit]:hover{
+      background-color: #ffffff;
+      color: #ff0000;
+      transition: 0.5s;
+  }  
+  
+  .col-25{
+      float:left;
+      /* width: 15%; */
+      margin-top: 6px;
+      margin-left: 5rem;
+  }
+  
+  .col-75{
+      /* float: left; */
+      /* width: 75%; */
+      margin-top: 6px;
+  }
+  
+  /* Clear Float After the Columns */
+  .row::after{
+      content: "";
+      display: table;
+      clear: both;
+  }  
+  
+  /* Responsive Layout-When the screen is less than 600px wide, make 
+  the two columns stack on top of each other instead of next to each other */
+
+  @media screen and (max-width:1140px){
+        body{
+            overflow-x: hidden;
+        }
+  }
+
+  @media screen and (max-width:900px){
+      .col-25, .col-75, input[type=submit], input[type=file]{
+          width: 100%;
+          margin-top: 0;
+          box-sizing: border-box;
+      }
+
+      body{
+          overflow-x: hidden;
+      }
+  }
+
+  @media screen and (max-width:960px){
+    .float, .container{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .float{
+        margin-left: 15rem;
+    }
+}
+
+
+
+@media screen and (max-width:960px){
+    .col-25, .col-75, input[type=submit], input[type=file]{
+        width: 100%;
+        margin-top: 0;
+        box-sizing: border-box;
+
+    }
+}
+
+@media screen and (max-width:900px){
+  .float, .container{
+      width: 100%;
+      margin-top: 50px;
+      margin-left: 15rem;
+  }
+}
+
+
+
+
+@media screen and (max-width:500px){
+    .col-25, .col-75, input[type=submit]{
+        width: 100%;
+        margin-top: 0;
+        box-sizing: border-box;
+
+    }
+    input.file-upload[type=file], input.inp[type=text], select{
+        margin-left: 0;
+        width: 80%;
+    }
+
+    label.male1, label.male2, label.male3{
+        margin-left: 0;
+    } 
+
+    img.logo{
+        top: 5rem;
+    }
+
+    p.upload{
+        margin: 0;
+    }
+
+    p.budget{
+        width: 80%;
+        margin-left: 0;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width:500px){
+  .float, .container{
+      width: 100%;
+      margin-top: 50px;
+      margin-left: 2rem;
+  }
+  div.internation{
+      width: 70%;
+  }
+  
+}
+
+
+
+
+@media screen and (max-width:400px){
+    .col-25, .col-75, input[type=submit]{
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        box-sizing: border-box;
+
+    }
+    input.file-upload[type=file], input.inp[type=text]{
+        margin-left: 0;
+        width: 80%;
+    }
+
+    label.male1, label.male2, label.male3{
+        margin-left: 0;
+    } 
+
+    img.logo{
+        top: 5rem;
+    }
+
+    p.upload{
+        margin: 0;
+    }
+
+    p.budget{
+        width: 80%;
+        margin-left: 0;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width:400px){
+  .float, .container{
+      width: 100%;
+      margin-top: 50px;
+      margin-left: 2rem;
+  }
+  div.internation{
+      width: 70%;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
