@@ -1949,6 +1949,7 @@ figure{
 
 .cta-section .img-text{
   display: flex;
+  gap: 30px;
   align-items: center;
 }
 
