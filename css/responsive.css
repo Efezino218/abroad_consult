@@ -574,7 +574,7 @@
     padding: 60px 0px 200px 0px;
   }
   .cta-section{
-    padding: 60px 0px 70px 0px;
+    padding: 20px 0px 30px 0px;
   }
   .help-section{
     padding-bottom: 50px;
@@ -643,7 +643,22 @@
   .single-upcoming-event .lower-content {
     padding: 22px 20px 39px 20px;
   }
-	
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .line-divider2 {
+    height: 25px;
+  }
 }
 
 @media only screen and (max-width: 599px){

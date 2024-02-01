@@ -1924,7 +1924,7 @@ figure{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  padding: 103px 0px 111px 0px;
+  padding: 40px 0px 50px 0px;
   margin-bottom: 120px;
 }
 .cta-section .title{
@@ -1996,12 +1996,20 @@ figure{
   margin: 0 40px; /* Adjust margin as needed for spacing */
 }
 
+.line-divider2 {
+  border-bottom: 2px solid #fff; /* Define a solid border on the right side */
+  width: 80%; /* Make sure the line extends to the full height of the container */
+  height: 40px;
+  margin-left: auto; /* Adjust margin as needed for spacing */
+  margin-right: auto;
+}
+
 
 .cta-section  hr {
   border: none; /* Remove default border */
   height: 2px; /* Set the height of the line */
   background-color: #fff; /* Set the color of the line */
-  margin-top: 70px;
+  margin-top: 10px;
 }
 
 .cta-section .content-box2 {
