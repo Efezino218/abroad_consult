@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="https://formspree.io/f/xwpepjrz" method="post">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <div class="success-message" id="success-message">Submitted Successfully! Please wait Redirecting...</div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("join-webinar-btn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform validation
+            var isValid = true;
+            var inputs = document.querySelectorAll('#contact-form input[required]');
+
+            inputs.forEach(function (input) {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#db0303'; // Highlight empty fields
+                } else {
+                    input.style.borderColor = '#ccc'; // Reset field border color
+                }
+            });
+
+            if (!isValid) {
+                return; // Stop the form submission if validation fails
+            }
+
+            // Show the success message
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+
+            // Hide the success message and redirect to the webinar link after 2 seconds
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+                modal.style.display = 'none';
+                window.location.href = "https://meet.google.com/jfq-rnod-wux"; // Redirect to the webinar link
+            }, 2000);
+        });
+    </script>
+    <!-- cta-section end -->
+
+
+
+    <!-- ==========================================================================
+    Uncomment If U need The Second Option Of The Form Submitted This 
+    Restricted User That already Login,They are Save in LocalStorage
+    ========================================================================= -->
+    <!-- The Modal -->
+    <!-- <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>Join Webinar</h4>
+            <form id="contact-form" action="https://formspree.io/f/xwpepjrz" method="post">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" name="service" required>
+                        <option value=""></option>
+                        <option value="Rpro Travels: Travel abroad, Visa Assistance">Travel abroad, Visa Assistance
+                        </option>
+                        <option value="Cyjust Deals: Digital Services">Digital Services</option>
+                        <option value="Rpro Business: Business Development Services">Business Development Services
+                        </option>
+                        <option value="Abroad Consult: Study Abroad">Study Abroad</option>
+                    </select>
+                </div>
+                <div class="webinar_button">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button id="direct-join-btn" class="submit-btn" style="display: none;">Join Webinar
+                        Directly</button>
+                </div>
+
+            </form>
+            <div class="success-message" id="success-message">Submitted Successfully! Please wait Redirecting...</div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("join-webinar-btn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Get the direct join button
+        var directJoinBtn = document.getElementById("direct-join-btn");
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+
+            // Check if email exists in local storage
+            var email = localStorage.getItem('webinarEmail');
+            if (email) {
+                // If email exists, show the direct join button
+                directJoinBtn.style.display = 'block';
+            } else {
+                // If email doesn't exist, hide the direct join button
+                directJoinBtn.style.display = 'none';
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Check if the email exists in local storage
+            var email = document.getElementById('email').value;
+            if (localStorage.getItem('webinarEmail') === email) {
+                alert('Email already exists. Please join the webinar directly.');
+                return; // Stop the form submission if the email exists
+            }
+
+            // Perform validation
+            var isValid = true;
+            var inputs = document.querySelectorAll('#contact-form input[required], #contact-form select[required]');
+
+            inputs.forEach(function (input) {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#db0303'; // Highlight empty fields
+                } else {
+                    input.style.borderColor = '#ccc'; // Reset field border color
+                }
+            });
+
+            if (!isValid) {
+                return; // Stop the form submission if validation fails
+            }
+
+            // Show the success message
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+
+            // Hide the success message and redirect to the webinar link after 2 seconds
+            setTimeout(function () {
+                successMessage.style.display = 'none';
+                modal.style.display = 'none';
+                window.location.href = "https://meet.google.com/jfq-rnod-wux"; // Redirect to the webinar link
+            }, 2000);
+
+            // Submit the form using Formspree
+            fetch('https://formspree.io/f/xwpepjrz', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    firstName: document.getElementById('first-name').value,
+                    lastName: document.getElementById('last-name').value,
+                    email: email,
+                    phone: document.getElementById('phone').value,
+                    service: document.getElementById('service').value
+                })
+            }).then(function (response) {
+                if (response.ok) {
+                    console.log('Form submitted successfully');
+
+                    // Save email to local storage
+                    localStorage.setItem('webinarEmail', email);
+
+                    // Show direct join button
+                    directJoinBtn.style.display = 'block';
+                } else {
+                    console.error('Form submission error');
+                }
+            }).catch(function (error) {
+                console.error('Form submission error:', error);
+            });
+        });
+
+        // Handle direct join button click
+        directJoinBtn.onclick = function () {
+            window.location.href = "https://meet.google.com/jfq-rnod-wux";
+        }
+    </script> -->
+
+
+</body>
+
+</html>
