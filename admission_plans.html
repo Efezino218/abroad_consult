@@ -21,7 +21,7 @@
 
 
 
-    <title>Abroad Consult - Home</title>
+    <title>Abroad Consult - Admission Plans</title>
 
     <!-- Stylesheets -->
     <link href="css/style.css" rel="stylesheet">
@@ -35,23 +35,31 @@
 </head>
 <style>
     /* Admission Plans Section */
+    body {
+        font-family: Arial, sans-serif;
+    }
+
     #admission-plans {
         padding: 50px 0;
         background: #f9f9f9;
         text-align: center;
     }
 
+    #admission-plans .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
 
     #admission-plans .card {
         flex: 1 1 calc(33.333% - 20px);
-        /* 3 cards per row */
         margin: 10px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
         border: none;
         border-radius: 8px;
         overflow: hidden;
-        /* Maintain the same max-width for consistent spacing */
     }
 
     #admission-plans .card:hover {
@@ -63,7 +71,6 @@
         font-size: 22px;
         font-weight: bold;
         padding: 20px;
-        /* background: linear-gradient(135deg, #db0303, #f93d3d); */
         color: white;
     }
 
@@ -75,7 +82,6 @@
     #admission-plans .card-body ul {
         padding-left: 20px;
         text-align: left;
-        /* Align list items to the left for better readability */
     }
 
     #admission-plans .card-body ul li {
@@ -88,8 +94,15 @@
         color: #555;
     }
 
+    #admission-plans .card-body p:nth-of-type(2) {
+        /* Your specific styles */
+        font-weight: bold;
+    }
+
     .cover {
         font-weight: bold;
+        font-size: 20px;
+        margin-top: 10px;
     }
 
     #admission-plans h2 {
@@ -100,11 +113,35 @@
         width: 100%;
     }
 
+    .bg-warning {
+        background-color: #ffc107;
+    }
+
+    .bg-secondary {
+        background-color: #6c757d;
+    }
+
+    .bg-success {
+        background-color: #28a745;
+    }
+
+    .bg-danger {
+        background-color: #dc3545;
+    }
+
+    .bg-primary {
+        background-color: #007bff;
+    }
+
+    .bg-info {
+        background-color: #cc9e14 !important;
+    }
+
+
     @media (max-width: 992px) {
         #admission-plans .card {
             flex: 1 1 calc(50% - 20px);
             /* 2 cards per row */
-            max-width: calc(50% - 20px);
         }
     }
 
@@ -112,7 +149,6 @@
         #admission-plans .card {
             flex: 1 1 calc(100% - 20px);
             /* 1 card per row */
-            max-width: calc(100% - 20px);
         }
 
         #admission-plans .card-header {
@@ -187,9 +223,16 @@
                                 </div>
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li class="current"><a href="index.html">Home</a> </li>
+                                        <li class=""><a href="index.html">Home</a> </li>
                                         <li><a href="about.html">About Us</a></li>
-                                        <li><a href="services.html">Services</a></li>
+                                        <li class="current dropdown"><a href="#">Services <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <ul>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li class="current"><a href="admission_plans.html">Admission Plans</a>
+                                                </li>
+                                            </ul>
+                                        </li>
                                         <!-- <li class="dropdown"><a href="https://rprodeals.com/" target="_blank">Refer
                                                 & Earn</a></li> -->
                                         <li class="dropdown"><a href="#">Support <i class="fa fa-angle-down"></i></a>
@@ -247,9 +290,16 @@
                                 </div>
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li class="current"><a href="index.html">Home</a> </li>
+                                        <li class=""><a href="index.html">Home</a> </li>
                                         <li><a href="about.html">About Us</a></li>
-                                        <li class=""><a href="services.html">Services</a></li>
+                                        <li class="current dropdown"><a href="#">Services <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <ul>
+                                                <li><a href="services.html">Services</a></li>
+                                                <li class="current"><a href="admission_plans.html">Admission Plans</a>
+                                                </li>
+                                            </ul>
+                                        </li>
                                         <!-- <li class="dropdown"><a href="https://rprodeals.com/" target="_blank">Refer
                                                 & Earn</a></li> -->
                                         <li class="dropdown"><a href="#">Support <i class="fa fa-angle-down"></i></a>
@@ -277,8 +327,8 @@
             <div class="content-box">
                 <div class="title"></div>
                 <ul class="bread-crumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li>Contact</li>
+                    <!-- <li><a href="index.html">Home</a></li>
+                    <li>Contact</li> -->
 
                 </ul>
             </div>
@@ -286,146 +336,134 @@
     </section>
     <!-- page-title end -->
 
-    <!-- Admission Plans Section -->
-    <section id="admission-plans" class="container my-5">
-        <h2 class="text-center mb-4">Our Admission Plans</h2>
-        <div class="row">
-            <div class="col-lg-4 col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">Access Plan - #25,000</div>
-                    <div class="card-body">
-                        <p>Two applications maximum for any preferred course and country of your choice, plan is valid
-                            for
-                            12 months.</p>
+    <section id="admission-plans">
+        <h2>Our Admission Plans</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <h3 class="card-header bg-primary text-white">Access Plan - #25,000</h3>
                         <p class="cover">This covers:</p>
-                        <ul>
-                            <li>Consultation</li>
-                            <li>Application until admitted</li>
-                        </ul>
-                        <p><strong>Note:</strong> Application fees may apply. In situations where a candidate's
-                            preferred
-                            school requires us to pay an application fee, we will revert to the candidates to make the
-                            payment. Application fees could vary from $50 to $150. However, we do have schools that wave
-                            these application fees.</p>
+
+                        <div class="card-body">
+                            <ul>
+                                <li>Consultation</li>
+                                <li>Application until admitted</li>
+                            </ul><br>
+                            <p>*Application fees may apply.</p>
+                            <p>Valid for 12 months</p>
+                            <p>Two applications maximum for any preferred course and country of your choice</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-header bg-danger text-white">Gray Plan - #200,000 + 10% of Scholarship</div>
-                    <div class="card-body">
-                        <p>Two applications, valid for sixteen months.</p>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <h3 class="card-header bg-success text-white">Bronze Plan - #300,000</h3>
                         <p class="cover">This covers:</p>
-                        <ul>
-                            <li>Student scholarship application:</li>
-                            <li>Tuition</li>
-                            <li>Cost of living, insurance, cost of gadget</li>
-                        </ul>
-                        <p>This plan is for international students that are already admitted.</p>
+                        <div class="card-body">
+                            <ul>
+                                <li>Student loan application</li>
+                                <li>Tuition</li>
+                                <li>Cost of living, insurance, cost of gadget (for USA)</li>
+                            </ul><br>
+                            <p></p>
+                            <p>Valid for 12 months</p>
+                            <p>Three applications maximum for any preferred course and country of your choice</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-header bg-success text-white">Bronze Plan - #300,000</div>
-                    <div class="card-body">
-                        <p>Three applications maximum for any preferred course and country of your choice, plan is valid
-                            for
-                            12 months.</p>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <h3 class="card-header bg-danger text-white">Gray Plan - #200,000 + 10% value of scholarship
+                        </h3>
                         <p class="cover">This covers:</p>
-                        <ul>
-                            <li>Student loan application:</li>
-                            <li>Tuition</li>
-                            <li>Cost of living, insurance, cost of gadget (for USA)</li>
-                        </ul>
-                        <p>This plan is for international students that are already admitted.</p>
+                        <div class="card-body">
+                            <ul>
+                                <li>Student scholarship application</li>
+                                <li>Tuition</li>
+                                <li>Cost of living, insurance, cost of gadget</li>
+                            </ul><br>
+                            <p></p>
+                            <p>Valid for 16 months</p>
+                            <p>Two applications maximum for any preferred course and country of your choice</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-header bg-secondary text-white">Silver Plan - #100,000</div>
-                    <div class="card-body">
-                        <p>Two applications maximum for any preferred course and country of your choice, plan is valid
-                            for
-                            12 months.</p>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <h3 class="card-header bg-secondary text-white">Silver Plan - #100,000</h3>
                         <p class="cover">This covers:</p>
-                        <ul>
-                            <li>Access Plan</li>
-                            <li>Documentation Assistance</li>
-                            <li>Statement of purpose</li>
-                            <li>Study gap</li>
-                            <li>Professional Resume/CV</li>
-                            <li>Letter of recommendation (Academic)</li>
-                            <li>Letter of recommendation (Employer)</li>
-                        </ul>
-                        <p><strong>Note:</strong> Application fees may apply. In situations where a candidate's
-                            preferred
-                            school requires us to pay an application fee, we will revert to the candidates to make the
-                            payment. Application fees could vary from $50 to $150. However, we do have schools that wave
-                            these application fees.</p>
+                        <div class="card-body">
+                            <ul>
+                                <li>Access Plan</li>
+                                <li>Documentation Assistance</li>
+                                <ul>
+                                    <li>Statement of purpose</li>
+                                    <li>Study gap</li>
+                                    <li>Professional Resume/CV</li>
+                                    <li>Letter of recommendation (Academic)</li>
+                                    <li>Letter of recommendation (Employer)</li>
+                                </ul>
+                            </ul><br>
+                            <p>*Application fees may apply.</p>
+                            <p>Valid for 12 months</p>
+                            <p>Two applications maximum for any preferred course and country of your choice</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-header bg-warning text-white">Gold Plan A - #150,000</div>
-                    <div class="card-body">
-                        <p>Three applications maximum for any preferred course and country of your choice, plan is valid
-                            for
-                            12 months.</p>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <h3 class="card-header bg-warning text-white">Gold Plan A - #150,000</h3>
                         <p class="cover">This covers:</p>
-                        <ul>
-                            <li>Consultation</li>
-                            <li>Application until admitted</li>
-                            <li>Documentation Assistance:</li>
-                            <li>Statement of purpose</li>
-                            <li>Study gap</li>
-                            <li>Professional Resume/CV</li>
-                            <li>Letter of recommendation (Academic)</li>
-                            <li>Letter of recommendation (Employer)</li>
-                            <li>Student loan application</li>
-                            <li>Tuition</li>
-                            <li>Cost of living, insurance, cost of gadget (for USA)</li>
-                        </ul>
-                        <p><strong>Note:</strong> Application fees may apply. In situations where a candidate's
-                            preferred
-                            school requires us to pay an application fee, we will revert to the candidates to make the
-                            payment. Application fees could vary from $50 to $150. However, we do have schools that wave
-                            these application fees.</p>
+                        <div class="card-body">
+                            <ul>
+                                <li>Consultation</li>
+                                <li>Application until admitted</li>
+                                <li>Documentation Assistance</li>
+                                <ul>
+                                    <li>Statement of purpose</li>
+                                    <li>Study gap</li>
+                                    <li>Professional Resume/CV</li>
+                                    <li>Letter of recommendation (Academic)</li>
+                                    <li>Letter of recommendation (Employer)</li>
+                                </ul>
+                                <li>Student loan application</li>
+                                <li>Tuition</li>
+                                <li>Cost of living, insurance, cost of gadget (for USA)</li>
+                            </ul><br>
+                            <p>*Application fees may apply.</p>
+                            <p>Valid for 12 months</p>
+                            <p>Three applications maximum for any preferred course and country of your choice</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-header bg-info text-white">Gold Plan B - #200,000</div>
-                    <div class="card-body">
-                        <p>Three applications maximum for any preferred course and country of your choice, plan is valid
-                            for
-                            12 months.</p>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <h3 class="card-header bg-info text-white">Gold Plan B - #200,000</h3>
                         <p class="cover">This covers:</p>
-                        <ul>
-                            <li>Consultation</li>
-                            <li>Application until admitted</li>
-                            <li>Documentation Assistance:</li>
-                            <li>Statement of purpose</li>
-                            <li>Study gap</li>
-                            <li>Professional Resume/CV</li>
-                            <li>Letter of recommendation (Academic)</li>
-                            <li>Letter of recommendation (Employer)</li>
-                            <li>Student scholarship application</li>
-                        </ul>
-                        <p><strong>Note:</strong> Application fees may apply. In situations where a candidate's
-                            preferred
-                            school requires us to pay an application fee, we will revert to the candidates to make the
-                            payment. Application fees could vary from $50 to $150. However, we do have schools that wave
-                            these application fees.</p>
+                        <div class="card-body">
+                            <ul>
+                                <li>Consultation</li>
+                                <li>Application until admitted</li>
+                                <li>Documentation Assistance</li>
+                                <ul>
+                                    <li>Statement of purpose</li>
+                                    <li>Study gap</li>
+                                    <li>Professional Resume/CV</li>
+                                    <li>Letter of recommendation (Academic)</li>
+                                    <li>Letter of recommendation (Employer)</li>
+                                </ul>
+                                <li>Student scholarship application</li>
+                            </ul><br>
+                            <p>*Application fees may apply.</p>
+                            <p>Valid for 12 months</p>
+                            <p>Three applications maximum for any preferred course and country of your choice</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
 
     <!-- subscribe-section -->
@@ -463,7 +501,8 @@
                             <figure class="logo-box"><a href="index.html"><img src="images/footer-logo.png" alt=""></a>
                             </figure>
                             <div class="text">
-                                <p>At Rpro Consulting, We are committed to making international education accessible to
+                                <p>At Rpro Consulting, We are committed to making international education accessible
+                                    to
                                     students from all types of backgrounds using digital solutions.</p>
                             </div>
                             <ul class="footer-social">

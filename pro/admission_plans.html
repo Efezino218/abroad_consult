@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Google tag (gtag.js)  abroad consult-->
@@ -11,26 +11,127 @@
 
         gtag('config', 'G-Z8FP69VDSE');
     </script>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Abroad Consult - Complain</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Explore our study abroad services and discover opportunities to study in top universities around the world. Get expert guidance on admission, visas, scholarships, and more.">
     <meta name="keywords"
         content="study abroad, international education, overseas education, study overseas, university admissions, scholarships, visas">
-    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <link rel="stylesheet" href="css/responsive.css">
+
+
+
+    <title>Abroad Consult - Admission Plans</title>
+
+    <!-- Stylesheets -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
     <link rel="icon" href="images/favicon.svg" type="image/x-icon">
     <!-- font-awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font-awesome cdn -->
-    <script src='main.js'></script>
 </head>
+<style>
+    /* Admission Plans Section */
+    #admission-plans {
+        padding: 50px 0;
+        background: #f9f9f9;
+        text-align: center;
+    }
 
-<body>
+
+    #admission-plans .card {
+        flex: 1 1 calc(33.333% - 20px);
+        /* 3 cards per row */
+        margin: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+        /* Maintain the same max-width for consistent spacing */
+    }
+
+    #admission-plans .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    #admission-plans .card-header {
+        font-size: 22px;
+        font-weight: bold;
+        padding: 20px;
+        /* background: linear-gradient(135deg, #db0303, #f93d3d); */
+        color: white;
+    }
+
+    #admission-plans .card-body {
+        padding: 20px;
+        background: white;
+    }
+
+    #admission-plans .card-body ul {
+        padding-left: 20px;
+        text-align: left;
+        /* Align list items to the left for better readability */
+    }
+
+    #admission-plans .card-body ul li {
+        list-style-type: disc;
+        margin-bottom: 8px;
+    }
+
+    #admission-plans .card-body p {
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .cover {
+        font-weight: bold;
+    }
+
+    #admission-plans h2 {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    @media (max-width: 992px) {
+        #admission-plans .card {
+            flex: 1 1 calc(50% - 20px);
+            /* 2 cards per row */
+        }
+    }
+
+    @media (max-width: 768px) {
+        #admission-plans .card {
+            flex: 1 1 calc(100% - 20px);
+            /* 1 card per row */
+        }
+
+        #admission-plans .card-header {
+            font-size: 18px;
+            padding: 15px;
+        }
+
+        #admission-plans h2 {
+            font-size: 24px;
+        }
+    }
+</style>
+<!-- page wrapper -->
+
+<body class="boxed_wrapper">
+
+
+    <!-- .preloader -->
+    <div class="preloader"></div>
+    <!-- /.preloader -->
+
 
     <!-- Main Header -->
     <header class="main-header header-style-three header-style-four">
@@ -84,24 +185,25 @@
                                 </div>
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li class=""><a href="index.html">Home</a></li>
-                                        <li class=""><a href="about.html">About Us</a></li>
-                                        <li class="dropdown"><a href="#">Services <i class="fa fa-angle-down"></i></a>
+                                        <li class=""><a href="index.html">Home</a> </li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li class="current dropdown"><a href="#">Services <i
+                                                    class="fa fa-angle-down"></i></a>
                                             <ul>
                                                 <li><a href="services.html">Services</a></li>
-                                                <li><a href="admission_plans.html">Admission Plans</a></li>
+                                                <li class="current"><a href="admission_plans.html">Admission Plans</a>
+                                                </li>
                                             </ul>
-                                        </li> <!-- <li class="dropdown"><a href="https://rprodeals.com/" target="_blank">Refer
+                                        </li>
+                                        <!-- <li class="dropdown"><a href="https://rprodeals.com/" target="_blank">Refer
                                                 & Earn</a></li> -->
-                                        <li class="current dropdown"><a href="#">Support <i
-                                                    class="fa fa-angle-down"></i></a>
+                                        <li class="dropdown"><a href="#">Support <i class="fa fa-angle-down"></i></a>
                                             <ul>
                                                 <li><a href="contact.html">Contact US </a></li>
                                                 <li><a href="support_page.html">Complain Support</a></li>
                                             </ul>
                                         </li>
-                                        <li class=""><a href="refund_policy.html">Refund Policy</a></li>
-
+                                        <li><a href="refund_policy.html">Refund Policy</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -120,7 +222,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="icon-box"><a href="shop.html"><i class="flaticon-bag"></i></a></li>
+                            <li class="icon-box"><a href="coming_soon.html"><i class="flaticon-bag"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -150,23 +252,25 @@
                                 </div>
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
-                                        <li class=""><a href="index.html">Home</a></li>
-                                        <li class=""><a href="about.html">About Us</a></li>
-                                        <li class="dropdown"><a href="#">Services <i class="fa fa-angle-down"></i></a>
+                                        <li class=""><a href="index.html">Home</a> </li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li class="current dropdown"><a href="#">Services <i
+                                                    class="fa fa-angle-down"></i></a>
                                             <ul>
                                                 <li><a href="services.html">Services</a></li>
-                                                <li><a href="admission_plans.html">Admission Plans</a></li>
+                                                <li class="current"><a href="admission_plans.html">Admission Plans</a>
+                                                </li>
                                             </ul>
-                                        </li> <!-- <li class="dropdown"><a href="https://rprodeals.com/" target="_blank">Refer
+                                        </li>
+                                        <!-- <li class="dropdown"><a href="https://rprodeals.com/" target="_blank">Refer
                                                 & Earn</a></li> -->
-                                        <li class="current dropdown"><a href="#">Support <i
-                                                    class="fa fa-angle-down"></i></a>
+                                        <li class="dropdown"><a href="#">Support <i class="fa fa-angle-down"></i></a>
                                             <ul>
                                                 <li><a href="contact.html">Contact US </a></li>
                                                 <li><a href="support_page.html">Complain Support</a></li>
                                             </ul>
                                         </li>
-                                        <li class=""><a href="refund_policy.html">Refund Policy</a></li>
+                                        <li><a href="refund_policy.html">Refund Policy</a></li>
 
                                     </ul>
                                 </div>
@@ -184,33 +288,183 @@
         <div class="container">
             <div class="content-box">
                 <div class="title"></div>
-                <h1 style="color: #fff;">Contact Us for Complaints</h1>
+                <ul class="bread-crumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Contact</li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- page-title end -->
+
+    <!-- Admission Plans Section -->
+    <section id="admission-plans" class="container my-5">
+        <h2 class="text-center mb-4">Our Admission Plans</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Access Plan - #25,000</div>
+                    <div class="card-body">
+                        <p>Two applications maximum for any preferred course and country of your choice, plan is valid
+                            for
+                            12 months.</p>
+                        <p class="cover">This covers:</p>
+                        <ul>
+                            <li>Consultation</li>
+                            <li>Application until admitted</li>
+                        </ul>
+                        <p><strong>Note:</strong> Application fees may apply. In situations where a candidate's
+                            preferred
+                            school requires us to pay an application fee, we will revert to the candidates to make the
+                            payment. Application fees could vary from $50 to $150. However, we do have schools that wave
+                            these application fees.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">Gray Plan - #200,000 + 10% of Scholarship</div>
+                    <div class="card-body">
+                        <p>Two applications, valid for sixteen months.</p>
+                        <p class="cover">This covers:</p>
+                        <ul>
+                            <li>Student scholarship application:</li>
+                            <li>Tuition</li>
+                            <li>Cost of living, insurance, cost of gadget</li>
+                        </ul>
+                        <p>This plan is for international students that are already admitted.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Bronze Plan - #300,000</div>
+                    <div class="card-body">
+                        <p>Three applications maximum for any preferred course and country of your choice, plan is valid
+                            for
+                            12 months.</p>
+                        <p class="cover">This covers:</p>
+                        <ul>
+                            <li>Student loan application:</li>
+                            <li>Tuition</li>
+                            <li>Cost of living, insurance, cost of gadget (for USA)</li>
+                        </ul>
+                        <p>This plan is for international students that are already admitted.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">Silver Plan - #100,000</div>
+                    <div class="card-body">
+                        <p>Two applications maximum for any preferred course and country of your choice, plan is valid
+                            for
+                            12 months.</p>
+                        <p class="cover">This covers:</p>
+                        <ul>
+                            <li>Access Plan</li>
+                            <li>Documentation Assistance</li>
+                            <li>Statement of purpose</li>
+                            <li>Study gap</li>
+                            <li>Professional Resume/CV</li>
+                            <li>Letter of recommendation (Academic)</li>
+                            <li>Letter of recommendation (Employer)</li>
+                        </ul>
+                        <p><strong>Note:</strong> Application fees may apply. In situations where a candidate's
+                            preferred
+                            school requires us to pay an application fee, we will revert to the candidates to make the
+                            payment. Application fees could vary from $50 to $150. However, we do have schools that wave
+                            these application fees.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">Gold Plan A - #150,000</div>
+                    <div class="card-body">
+                        <p>Three applications maximum for any preferred course and country of your choice, plan is valid
+                            for
+                            12 months.</p>
+                        <p class="cover">This covers:</p>
+                        <ul>
+                            <li>Consultation</li>
+                            <li>Application until admitted</li>
+                            <li>Documentation Assistance:</li>
+                            <li>Statement of purpose</li>
+                            <li>Study gap</li>
+                            <li>Professional Resume/CV</li>
+                            <li>Letter of recommendation (Academic)</li>
+                            <li>Letter of recommendation (Employer)</li>
+                            <li>Student loan application</li>
+                            <li>Tuition</li>
+                            <li>Cost of living, insurance, cost of gadget (for USA)</li>
+                        </ul>
+                        <p><strong>Note:</strong> Application fees may apply. In situations where a candidate's
+                            preferred
+                            school requires us to pay an application fee, we will revert to the candidates to make the
+                            payment. Application fees could vary from $50 to $150. However, we do have schools that wave
+                            these application fees.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header bg-info text-white">Gold Plan B - #200,000</div>
+                    <div class="card-body">
+                        <p>Three applications maximum for any preferred course and country of your choice, plan is valid
+                            for
+                            12 months.</p>
+                        <p class="cover">This covers:</p>
+                        <ul>
+                            <li>Consultation</li>
+                            <li>Application until admitted</li>
+                            <li>Documentation Assistance:</li>
+                            <li>Statement of purpose</li>
+                            <li>Study gap</li>
+                            <li>Professional Resume/CV</li>
+                            <li>Letter of recommendation (Academic)</li>
+                            <li>Letter of recommendation (Employer)</li>
+                            <li>Student scholarship application</li>
+                        </ul>
+                        <p><strong>Note:</strong> Application fees may apply. In situations where a candidate's
+                            preferred
+                            school requires us to pay an application fee, we will revert to the candidates to make the
+                            payment. Application fees could vary from $50 to $150. However, we do have schools that wave
+                            these application fees.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
-    <!-- Support Page -->
-    <section id="support-page">
-        <div class="container">
-            <h1>Support</h1>
-            <p>If you have any issues or need assistance, please find the relevant support information below.</p>
 
-            <!-- Contact Us for Complaints Section -->
-            <section id="contact-complaints">
-                <div class="container">
-                    <h2>Contact Us for Complaints</h2>
-                    <p>We value your feedback and are committed to providing the best service possible. If you have any
-                        complaints, please do not hesitate to reach out to us. Your concerns are important to us, and we
-                        will address them promptly.</p>
-                    <p>For any complaints, please contact us at:</p>
-                    <p>Email: <a href="mailto:complaints@rprogroup.net">complaints@rprogroup.net</a></p>
-                    <p>We appreciate your patience and understanding as we work to resolve your issues. Thank you for
-                        helping us improve our services.</p>
+    <!-- subscribe-section -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-content">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 column">
+                        <div class="subscribe-title">Subscribe To Our Newsletter</div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 column">
+                        <div class="subscribe-form">
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your Email" required="">
+                                    <button type="submit" class="theme-btn">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </div>
         </div>
     </section>
+    <!-- subscribe-section end -->
+
+
     <!-- main-footer -->
     <footer class="main-footer">
         <div class="container">
@@ -303,6 +557,7 @@
     </script>
     <!-- /GetButton.io widget -->
 
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -316,7 +571,6 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
-
 
 
 

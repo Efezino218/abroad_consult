@@ -559,7 +559,7 @@
 })(window.jQuery);
 
 
-// Loan Form Javascript Functionality
+// Loan Form Javascript Functionality//
 document.addEventListener("DOMContentLoaded", function () {
 	const loanBtn = document.getElementById("get-loan-btn");
 	const loanFormContainer = document.getElementById("loan-form-container");
@@ -630,3 +630,61 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+
+
+
+
+
+// survey//
+document.addEventListener('DOMContentLoaded', function () {
+	var banner = document.querySelector('.notification-banner');
+	var closeBtn = document.querySelector('.close-banner');
+	var handIcon = document.querySelector('.hand-animation');
+
+	// Function to hide the banner
+	function hideBanner() {
+		banner.style.display = 'none';
+	}
+
+	// Close the banner when the user clicks the close button
+	closeBtn.addEventListener('click', hideBanner);
+
+	// Simulate a hand animation to grab attention after 3 seconds
+	setTimeout(function () {
+		handIcon.style.transform = 'translateX(100px) translateY(-10px)';  // Hand moves towards link
+	}, 3000); // Trigger after 3 seconds
+
+	// Hide the banner after 30 seconds
+	setTimeout(hideBanner, 30000); // 30 seconds
+});
+
+
+
+
+// Client Rating//
+document.addEventListener('DOMContentLoaded', function () {
+	var customRateButton = document.getElementById('customRateButton');
+
+	// Function to show and hide the button in 10-second intervals
+	function toggleButtonVisibility() {
+		// Show the button
+		customRateButton.classList.add('show');
+
+		// Hide the button after 10 seconds
+		setTimeout(function () {
+			customRateButton.classList.remove('show');
+		}, 10000); // Button stays visible for 10 seconds
+	}
+
+	// Initial delay before the button first shows (after 10 seconds)
+	setTimeout(function () {
+		toggleButtonVisibility(); // First popup after 10 seconds
+
+		// Then continue showing and hiding the button every 20 seconds (10s visible, 10s hidden)
+		setInterval(toggleButtonVisibility, 20000); // Repeats every 20 seconds
+	}, 500); // 10000 Initial 10-second delay before the first show
+});
+
+
+

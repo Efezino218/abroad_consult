@@ -1,0 +1,206 @@
+Q.  want to study abroad
+A.That's great to hear! Studying abroad offers incredible opportunities for personal growth, academic enhancement, and cultural enrichment! To get started with your abroad journey, kindly indicate the pathway you are going for:
+-Undergraduate
+-Post Graduate
+-Diploma
+-Associate Degree
+-Student Loan Application
+
+
+Q. Undergraduate
+A. Our available plans are listed below. Please select the plan you want:
+- Bronze Plan
+- Gray Plan
+- Silver Plan
+- Gold Plan A
+- Gold Plan B
+
+Q. Post Graduate
+A. Our available plans are listed below. Please select the plan you want:
+- Bronze Plan
+- Gray Plan
+- Silver Plan
+- Gold Plan A
+- Gold Plan B
+
+Q. Diploma
+A. Our available plans are listed below. Please select the plan you want:
+- Bronze Plan
+- Gray Plan
+- Silver Plan
+- Gold Plan A
+- Gold Plan B
+
+
+Q. Associate Degree
+A. Our available plans are listed below. Please select the plan you want:
+- Bronze Plan
+- Gray Plan
+- Silver Plan
+- Gold Plan A
+- Gold Plan B
+
+
+Q.Student Loan Application
+A. Our available plans are listed below. Please select the plan you want:
+- Bronze Plan
+- Gray Plan
+- Silver Plan
+- Gold Plan A
+- Gold Plan B
+
+
+Q. Bronze Plan 
+A. _Bronze Plan - #300,000_
+This covers:
+- Student loan application
+- Tuition
+- Cost of living, insurance, cost of gadgets (for USA)
+Valid for 12 months
+Three applications maximum for any preferred course and country of your choice.
+
+
+
+
+Q.Gray Plan
+A. Gray Plan - #200,000 + 10% value of scholarship
+This covers:
+
+Student scholarship application
+Tuition
+Cost of living, insurance, cost of gadget
+
+Valid for 16 months
+
+Two applications maximum for any preferred course and counry of your choice
+
+
+
+
+Q. Silver Plan
+A.Silver Plan - #100,000
+This covers:
+
+Access Plan
+Documentation Assistance
+Statement of purpose
+Study gap
+Professional Resume/CV
+Letter of recommendation (Academic)
+Letter of recommendation (Employer)
+
+*Application fees may apply.
+
+Valid for 12 months
+
+Two applications maximum for any preferred course and country of your choice
+
+
+
+Q. Gold Plan A
+A. Gold Plan A - #150,000
+This covers:
+
+Consultation
+Application until admitted
+Documentation Assistance
+Statement of purpose
+Study gap
+Professional Resume/CV
+Letter of recommendation (Academic)
+Letter of recommendation (Employer)
+Student loan application
+Tuition
+Cost of living, insurance, cost of gadget (for USA)
+
+*Application fees may apply.
+
+Valid for 12 months
+
+Three applications maximum for any preferred course and country of your choice
+
+
+
+Q. Gold Plan B
+A.Gold Plan B - #200,000
+This covers:
+
+Consultation
+Application until admitted
+Documentation Assistance
+Statement of purpose
+Study gap
+Professional Resume/CV
+Letter of recommendation (Academic)
+Letter of recommendation (Employer)
+Student scholarship application
+
+*Application fees may apply.
+
+Valid for 12 months
+
+Three applications maximum for any preferred course and country of your choice
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
